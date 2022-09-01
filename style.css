@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+:root {
+  --paragraph-color: hsl(237, 18%, 59%);
+  --time-color: hsl(345, 95%, 68%);
+  --header-color: hsl(0, 0%, 100%);
+  --time-top-bg: hsl(236, 21%, 26%);
+  --time-bottom-bg: hsl(235, 16%, 14%);
+  --body-bg: hsl(234, 17%, 12%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Red Hat Text", sans-serif;
+}
+
+div.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-image: url("./images/pattern-hills.svg"),
+    url("./images/bg-stars.svg");
+  background-repeat: no-repeat;
+  background-position: bottom, center;
+  background-size: contain;
+  background-color: var(--body-bg);
+
+  height: 98vh;
+}
+h2 {
+  color: var(--header-color);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  word-spacing: 0.5rem;
+  text-align: center;
+}
+div.links {
+  display: flex;
+  width: auto;
+  gap: 20px;
+}
+a img:hover {
+  filter: invert(69%) sepia(79%) saturate(3913%) hue-rotate(308deg)
+    brightness(97%) contrast(103%);
+}
+section {
+  display: flex;
+  width: auto;
+  gap: 20px;
+}
+section > div {
+  text-align: center;
+  display: grid;
+  gap: 20px;
+}
+section article {
+  display: grid;
+  grid-template-columns: auto;
+  position: relative;
+}
+div.top {
+  width: 140px;
+  height: 70px;
+  border-radius: 5px 5px 10px 10px;
+  background: var(--time-top-bg);
+  opacity: 0.4;
+  z-index: 2;
+}
+div.bottom {
+  width: 140px;
+  border-radius: 10px 10px 5px 5px;
+  height: 70px;
+  background: var(--time-top-bg);
+  opacity: 0.7;
+  z-index: 0;
+}
+section > div > p {
+  color: var(--paragraph-color);
+  letter-spacing: 0.2rem;
+}
+article p {
+  position: absolute;
+  color: var(--time-color);
+  font-size: 4.5rem;
+  inset: 0;
+  transform: translate(0%, 15%);
+  z-index: 1;
+}
+@media only screen and (max-width: 800px) {
+  div.top {
+    width: 120px;
+    height: 70px;
+  }
+  div.bottom {
+    width: 120px;
+    height: 70px;
+  }
+  article p {
+    font-size: 4rem;
+  }
+  section {
+    gap: 15px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  h2 {
+    font-size: 24px;
+  }
+  div.top {
+    width: 80px;
+    height: 50px;
+  }
+  div.bottom {
+    width: 80px;
+    height: 50px;
+  }
+  article p {
+    font-size: 2.5rem;
+    transform: translate(0%, 23%);
+  }
+  section {
+    gap: 5px;
+  }
+  section > div > p {
+    color: var(--paragraph-color);
+    letter-spacing: 0.05rem;
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 290px) {
+  h2 {
+    font-size: 20px;
+  }
+  div.top {
+    width: 60px;
+    height: 40px;
+  }
+  div.bottom {
+    width: 60px;
+    height: 40px;
+  }
+  article p {
+    font-size: 2rem;
+  }
+}
