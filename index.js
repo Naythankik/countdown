@@ -3,7 +3,7 @@ let minute = document.querySelector(".minute");
 let hour = document.querySelector(".hour");
 let day = document.querySelector(".day");
 
-let countdown = new Date("September 30 ,2022 11:59:59").getTime();
+let countdown = new Date("September 30 ,2023 11:59:59").getTime();
 
 let x = setInterval(() => {
   let now = new Date().getTime();
