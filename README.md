@@ -1,5 +1,5 @@
 # Frontend Mentor - Launch countdown timer
-![Live Site](https://naythankik.github.io/countdown/)
+! [Live Site](https://naythankik.github.io/countdown/)
 
 ![Design preview for the Launch countdown timer coding challenge](./design/desktop-preview.jpg)
 
